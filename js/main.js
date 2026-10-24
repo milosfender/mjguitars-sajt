@@ -50,6 +50,9 @@
       contact_eyebrow: "Termin nach Vereinbarung", contact_title: "Kontakt",
       contact_address: "Adresse", contact_phone: "Telefon & WhatsApp", contact_email: "E-Mail",
       contact_map: "In Google Maps öffnen",
+      map_load: "Karte laden",
+      map_note: "Beim Laden der Karte werden Daten an Google übertragen.",
+      map_more: "Mehr dazu",
       footer_imprint: "Impressum", footer_privacy: "Datenschutz",
       wa_label: "WhatsApp schreiben"
     },
@@ -89,6 +92,9 @@
       contact_eyebrow: "By appointment", contact_title: "Contact",
       contact_address: "Address", contact_phone: "Phone & WhatsApp", contact_email: "Email",
       contact_map: "Open in Google Maps",
+      map_load: "Load map",
+      map_note: "Loading the map sends data to Google.",
+      map_more: "Learn more",
       footer_imprint: "Imprint", footer_privacy: "Privacy",
       wa_label: "Write on WhatsApp"
     }
@@ -522,6 +528,23 @@
       renderCategoryPills();
       renderGuitars();
     });
+
+    // Google Maps erst nach Klick laden (keine Daten an Google ohne Zustimmung)
+    var mapLoad = document.getElementById("map-load");
+    if (mapLoad) {
+      mapLoad.addEventListener("click", function () {
+        var box = document.getElementById("map");
+        var frame = document.createElement("iframe");
+        frame.src = box.getAttribute("data-src");
+        frame.title = "MJ Guitars auf Google Maps";
+        frame.loading = "lazy";
+        frame.allowFullscreen = true;
+        frame.referrerPolicy = "strict-origin-when-cross-origin";
+        frame.style.border = "0";
+        box.innerHTML = "";
+        box.appendChild(frame);
+      });
+    }
 
     var saved = storageGet("mj-lang");
     state.lang = saved && I18N[saved] ? saved : "de";

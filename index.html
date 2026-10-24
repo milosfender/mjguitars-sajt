@@ -47,9 +47,6 @@
     ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -257,8 +254,14 @@
         </div>
       </div>
       <div class="map-wrap">
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.33381092734!2d16.395256112039178!3d48.21944647113287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0724364af9ff%3A0x87a7d409d7738935!2sMJ%20GUITARS%20Wien!5e0!3m2!1sit!2sat!4v1792602087706!5m2!1sit!2sat" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="MJ Guitars auf Google Maps"></iframe>
+        <!-- Google Maps wird erst nach Klick geladen (Datenschutz) -->
+        <div class="map" id="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.33381092734!2d16.395256112039178!3d48.21944647113287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0724364af9ff%3A0x87a7d409d7738935!2sMJ%20GUITARS%20Wien!5e0!3m2!1sde!2sat!4v1792602087706!5m2!1sde!2sat">
+          <div class="map-consent">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <p class="map-address">Mumbgasse 2/3, 1020 Wien</p>
+            <button type="button" class="btn btn-outline" id="map-load" data-i18n="map_load">Karte laden</button>
+            <p class="map-note"><span data-i18n="map_note">Beim Laden der Karte werden Daten an Google übertragen.</span> <a href="datenschutz.html" data-i18n="map_more">Mehr dazu</a></p>
+          </div>
         </div>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Mumbgasse+2+1020+Wien" target="_blank" rel="noopener" data-i18n="contact_map">In Google Maps öffnen</a>
       </div>
