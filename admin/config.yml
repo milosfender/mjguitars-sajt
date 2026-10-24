@@ -1,0 +1,62 @@
+# Konfiguration des Verwaltungsbereichs (/admin)
+# Hier wird festgelegt, welche Felder Milos im Panel sieht.
+# Änderungen an diesem Ablauf nur mit Stefan absprechen.
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "gitarren"
+    label: "Gitarren"
+    files:
+      - name: "gitarren-liste"
+        label: "Gitarren-Liste"
+        file: "data/guitars.json"
+        fields:
+          - label: "Gitarren"
+            name: "guitars"
+            widget: "list"
+            label_singular: "Gitarre"
+            summary: "{{fields.brand}} {{fields.model}} ({{fields.year}}) – {{fields.price}} €"
+            fields:
+              - { label: "Marke", name: "brand", widget: "string" }
+              - { label: "Modell", name: "model", widget: "string" }
+              - label: "Kategorie"
+                name: "category"
+                widget: "select"
+                options:
+                  - "E-Gitarre"
+                  - "Akustikgitarre"
+                  - "Klassische Gitarre"
+                  - "E-Bass"
+                  - "Akustikbass"
+                  - "Verstärker"
+                  - "Sonstiges"
+              - label: "Zustand"
+                name: "condition"
+                widget: "select"
+                options:
+                  - "Neu"
+                  - "Neu – Ausstellungsstück"
+                  - "Wie neu"
+                  - "Gebraucht – sehr gut"
+                  - "Gebraucht – gut"
+                  - "Gebraucht – Gebrauchsspuren"
+              - { label: "Baujahr", name: "year", widget: "number", value_type: "int", min: 1900, max: 2030 }
+              - { label: "Preis in Euro", name: "price", widget: "number", value_type: "int", min: 0 }
+              - { label: "Beschreibung (1–3 Sätze)", name: "description", widget: "text" }
+              - label: "Fotos (10 bis 20 empfohlen, das erste Foto ist das Titelbild)"
+                name: "photos"
+                widget: "list"
+                field: { label: "Foto", name: "photo", widget: "image" }
+              - label: "Verkauft"
+                name: "sold"
+                widget: "boolean"
+                default: false
+                hint: "Einschalten, wenn die Gitarre verkauft ist. Sie bleibt dann mit Badge sichtbar."
