@@ -3,11 +3,22 @@
 # Änderungen an diesem Ablauf nur mit Stefan absprechen.
 
 backend:
-  name: git-gateway
+  name: github
+  repo: milosfender/mjguitars-sajt
   branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+
+# Fotos werden beim Hochladen automatisch verkleinert und als WebP gespeichert.
+media_libraries:
+  all:
+    transformations:
+      raster_image:
+        format: webp
+        quality: 82
+        width: 1600
+        height: 1600
 
 publish_mode: simple
 

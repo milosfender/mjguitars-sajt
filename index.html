@@ -267,17 +267,6 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
   </a>
 
-  <!-- Netlify Identity: Einladungslink führt Milos direkt in den Admin-Bereich -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", function (user) {
-        if (!user) {
-          window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
-        }
-      });
-    }
-  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
