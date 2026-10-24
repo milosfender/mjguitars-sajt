@@ -1,0 +1,39 @@
+# Einstellungen für Netlify
+# Die Website braucht keinen Build-Schritt: alle Dateien werden direkt veröffentlicht.
+
+[build]
+  publish = "."
+
+# Alte Adressen der früheren Website auf die neuen Seiten weiterleiten (301 = dauerhaft)
+[[redirects]]
+  from = "/Home.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/Impressum.html"
+  to = "/impressum.html"
+  status = 301
+
+[[redirects]]
+  from = "/Dateschutz.html"
+  to = "/datenschutz.html"
+  status = 301
+
+[[redirects]]
+  from = "/Datenschutz.html"
+  to = "/datenschutz.html"
+  status = 301
+
+# Grundlegende Sicherheitseinstellungen
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
