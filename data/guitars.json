@@ -28,29 +28,6 @@
       "sold": false
     },
     {
-      "brand": "Fender",
-      "model": "Tele-Sonic (Made in USA)",
-      "category": "E-Gitarre",
-      "condition": "Wie neu",
-      "year": 2004,
-      "price": 1599,
-      "description": "Korpus aus Mahagoni, Hals aus Ahorn, Griffbrett aus Palisander, DeArmond USA 2K Single-Coils. Mit Gibson-Spezifikationen und Gretsch-artigem Sound. Inklusive Original-Case.",
-      "photos": [
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/01.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/02.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/03.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/04.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/05.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/06.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/07.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/08.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/09.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/10.jpg",
-        "images/guitars/Fender Tele-Sonic 2004 Made in USA/11.jpg"
-      ],
-      "sold": false
-    },
-    {
       "brand": "Ibanez",
       "model": "RG350DXZ-WH",
       "category": "E-Gitarre",
@@ -68,32 +45,6 @@
         "images/guitars/Ibanez RG350DXZ 2018/07.jpg",
         "images/guitars/Ibanez RG350DXZ 2018/08.jpg",
         "images/guitars/Ibanez RG350DXZ 2018/09.jpg"
-      ],
-      "sold": false
-    },
-    {
-      "brand": "Maya",
-      "model": "Stratocaster Matching Headstock (Made in Japan)",
-      "category": "E-Gitarre",
-      "condition": "Gebraucht – sehr gut",
-      "year": 1973,
-      "price": 450,
-      "description": "Vintage-Stratocaster-Typ aus Japan, Baujahr ca. 1973–1976, in Candy Apple Red mit passend lackierter Kopfplatte. Ahornhals und drei Single-Coils. Minimale Gebrauchsspuren, keine Lackabplatzungen.",
-      "photos": [
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/01.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/02.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/03.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/04.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/05.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/06.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/07.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/08.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/09.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/10.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/11.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/12.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/13.jpg",
-        "images/guitars/Maya Stratocaster Matching Headstock Lawsuit-Ära Made in Japan 1973-1976/14.jpg"
       ],
       "sold": false
     },
