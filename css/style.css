@@ -1355,3 +1355,33 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
   .band .reviews { padding-top: 72px; padding-bottom: 72px; }
   .cta-banner { padding: 36px 26px; }
 }
+
+
+/* Gitarrensaiten hinter den Zitaten */
+.interlude { position: relative; overflow: hidden; }
+.interlude-inner { position: relative; z-index: 1; }
+.strings {
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  width: 100%;
+  height: 150px;
+  transform: translateY(-38%);
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+}
+.strings .str { fill: none; opacity: .38; vector-effect: non-scaling-stroke; transition: opacity .8s ease; }
+.interlude.plucked .strings .str { opacity: .75; }
+.interlude.plucked .strings { filter: drop-shadow(0 0 6px rgba(226, 178, 92, .35)); }
+.interlude-b .strings { transform: translateY(-45%); }
+.interlude-inner { cursor: default; }
+@media (max-width: 720px) {
+  .strings { height: 120px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .strings .str { transition: none; }
+}
+
+.interlude blockquote p { text-shadow: 0 2px 14px rgba(21, 18, 14, .95), 0 0 2px rgba(21, 18, 14, .9); }
+.interlude em, .interlude .qm { text-shadow: none; }

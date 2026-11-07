@@ -954,6 +954,27 @@
   }
 
   /* ---------- Zitate: sanft einblenden, Saiten schwingen ---------- */
+  // Saiten anschlagen: von der hohen zur tiefen Saite, wie ein Akkord
+  function pluck(section) {
+    if (section._pluckBusy) return;
+    section._pluckBusy = true;
+    section.classList.add("plucked");
+    section.querySelectorAll(".strings animate").forEach(function (a, i) {
+      setTimeout(function () { try { a.beginElement(); } catch (e) { /* ignorieren */ } }, 200 + i * 60);
+    });
+    setTimeout(function () { section._pluckBusy = false; section.classList.remove("plucked"); }, 2600);
+  }
+
+  function initStrings() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll(".interlude").forEach(function (section) {
+      var inner = section.querySelector(".interlude-inner");
+      if (!inner) return;
+      inner.addEventListener("mouseenter", function () { pluck(section); });
+      inner.addEventListener("click", function () { pluck(section); });
+    });
+  }
+
   function initReveal() {
     var targets = document.querySelectorAll(".reveal");
     if (!("IntersectionObserver" in window)) {
@@ -965,12 +986,8 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("in");
-        var section = entry.target.closest(".quote");
-        if (section && !reduced) {
-          section.querySelectorAll(".quote-strings animate").forEach(function (a, i) {
-            setTimeout(function () { try { a.beginElement(); } catch (e) { /* ignorieren */ } }, 250 + i * 70);
-          });
-        }
+        var section = entry.target.closest(".interlude");
+        if (section && !reduced) pluck(section);
         io.unobserve(entry.target);
       });
     }, { threshold: 0.35 });
@@ -1061,6 +1078,7 @@
     initMenu();
     initZoom();
     initReveal();
+    initStrings();
     initReviewNav();
 
     var saved = storageGet("mj-lang");
