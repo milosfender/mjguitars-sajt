@@ -1389,3 +1389,36 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
 
 .interlude blockquote p { text-shadow: 0 2px 14px rgba(21, 18, 14, .95), 0 0 2px rgba(21, 18, 14, .9); }
 .interlude em, .interlude .qm { text-shadow: none; }
+
+
+/* Willhaben-Hinweis unter den Produkten */
+.wh-card {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 26px 30px;
+  border-radius: var(--radius);
+  border: 1px solid #4A3B28;
+  background:
+    radial-gradient(420px 180px at 0% 50%, rgba(226, 178, 92, 0.12), transparent 70%),
+    linear-gradient(135deg, #221C15, #18140F);
+}
+.wh-icon {
+  flex: 0 0 52px;
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: rgba(226, 178, 92, 0.10);
+  border: 1px solid rgba(226, 178, 92, 0.25);
+}
+.wh-text { flex: 1 1 auto; min-width: 0; }
+.wh-text h3 { font-size: 21px; color: var(--cream); margin-bottom: 4px; }
+.wh-text p { color: var(--text-soft); font-size: 15.5px; }
+.wh-btn { flex: 0 0 auto; white-space: nowrap; }
+@media (max-width: 720px) {
+  .wh-card { flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px; }
+  .wh-btn { width: 100%; justify-content: center; }
+}
