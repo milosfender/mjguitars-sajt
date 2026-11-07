@@ -534,7 +534,7 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
   gap: 56px;
 }
 .band-intro { flex: 1 1 320px; min-width: 0; }
-.band-intro p { margin-top: 18px; color: var(--text-soft); }
+.band-intro p:not(.eyebrow) { margin-top: 18px; color: var(--text-soft); }
 .band-intro .btn { margin-top: 26px; }
 .cards-2 {
   flex: 1 1 420px;
@@ -920,23 +920,8 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
 }
 .side-quote figcaption::before { content: "— "; }
 
-.reveal { opacity: 0; transform: translateX(-16px); transition: opacity .9s ease, transform .9s cubic-bezier(.2, .8, .2, 1); }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .9s ease, transform .9s cubic-bezier(.2, .8, .2, 1); }
 .reveal.in { opacity: 1; transform: none; }
-
-/* ==========================================================
-   Über uns
-   ========================================================== */
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: 64px;
-  align-items: center;
-}
-.about h2 { font-weight: 800; font-size: clamp(34px, 4.5vw, 48px); letter-spacing: -0.02em; margin-bottom: 20px; }
-.about-text p:not(.eyebrow) { color: var(--text-soft); margin-bottom: 14px; max-width: 620px; }
-.about-text .about-lead { color: var(--cream); font-size: 20px; font-weight: 500; }
-.about-text .about-tagline { color: var(--accent-light); font-family: var(--font-head); font-weight: 700; font-size: 19px; }
-.about-text .about-sign { font-family: 'Cinzel', Georgia, serif; font-weight: 600; letter-spacing: .06em; color: var(--cream); margin: 4px 0 24px; }
 
 /* ==========================================================
    Service (Liste)
@@ -1195,4 +1180,178 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .mega, .mega-list li { transition: none; }
+}
+
+
+/* ==========================================================
+   Feinschliff: Ordnung & Rhythmus
+   ========================================================== */
+.section { padding: 104px 24px; }
+.section-tight { padding-top: 8px; padding-bottom: 104px; }
+.contact { padding-top: 0; }
+
+/* Überschriften-Zeile: goldener Strich vor jedem Kicker */
+.eyebrow { display: flex; align-items: center; gap: 12px; }
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--copper), var(--accent-light));
+  flex: 0 0 auto;
+}
+.mega-eyebrow::before { content: none; }
+
+/* Startbereich: Logo ohne doppelten Rahmen, Fakten-Leiste */
+.hero { padding: 88px 24px 96px; }
+.hero-figure {
+  border: 0;
+  background: none;
+  overflow: visible;
+}
+.hero-glow { width: 460px; height: 460px; opacity: .9; }
+.hero-logo {
+  width: min(64%, 300px);
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, .45));
+}
+.hero-facts {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 26px 0 0;
+  border-top: 1px solid var(--line-soft);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 16px 40px;
+  max-width: 600px;
+}
+.fact { display: flex; flex-direction: column; gap: 2px; }
+.fact strong { font-family: var(--font-head); font-weight: 700; font-size: 18px; color: var(--cream); }
+.fact > span { color: var(--text-muted); font-size: 14px; }
+.fact strong span { color: inherit; font-size: inherit; }
+.fact .fact-stars { color: var(--accent); font-size: 14px; letter-spacing: 1px; }
+
+/* Zitate als ruhige Zwischenkapitel */
+.interlude { max-width: 980px; margin: 0 auto; padding: 16px 24px 8px; text-align: center; }
+.interlude-b { padding: 88px 24px 96px; }
+.interlude-inner { margin: 0; }
+.ornament { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 28px; }
+.ornament span { width: 64px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent)); }
+.ornament span:last-child { background: linear-gradient(90deg, var(--accent), transparent); }
+.ornament i { font-style: normal; color: var(--accent); font-size: 14px; }
+.interlude blockquote { margin: 0; }
+.interlude p {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  text-wrap: balance;
+}
+.interlude em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--accent-light), var(--accent) 50%, var(--copper));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.interlude .qm {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--accent);
+  -webkit-text-fill-color: var(--accent);
+}
+.interlude-b p { font-weight: 500; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.4; color: var(--text); letter-spacing: -0.01em; max-width: 820px; margin: 0 auto; }
+.interlude figcaption {
+  margin-top: 22px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--accent);
+  font-size: 15px;
+}
+
+/* Über uns: Text links, Karte rechts */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+.about h2 { font-weight: 800; font-size: clamp(34px, 4.5vw, 48px); letter-spacing: -0.02em; margin-bottom: 22px; }
+.about-text p:not(.eyebrow) { color: var(--text-soft); margin-bottom: 14px; max-width: 600px; }
+.about-text .about-lead { color: var(--cream); font-size: 20px; font-weight: 500; line-height: 1.5; }
+.about-text .about-sign {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--accent-light);
+  font-size: 18px;
+  margin: 18px 0 0;
+}
+.about-card {
+  background: linear-gradient(160deg, #211B15, #18140F);
+  border: 1px solid #332A21;
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.about-points { list-style: none; margin: 0 0 28px; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+.about-points li { display: flex; gap: 16px; align-items: flex-start; }
+.about-points strong { display: block; font-family: var(--font-head); font-size: 18px; color: var(--text); margin-bottom: 2px; }
+.about-points span:not(.about-icon) { color: var(--text-soft); font-size: 15px; line-height: 1.5; }
+.about-icon {
+  flex: 0 0 44px;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: rgba(226, 178, 92, 0.10);
+  border: 1px solid rgba(226, 178, 92, 0.22);
+}
+.about-actions { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 24px; border-top: 1px solid var(--line-soft); }
+
+/* Bewertungen im Band: Abstand wie die anderen Abschnitte */
+.band .reviews { padding-top: 96px; padding-bottom: 96px; }
+
+/* Verkaufen: ruhiger, dunkle Karte mit goldenem Akzent */
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(520px 260px at 100% 0%, rgba(226, 178, 92, 0.18), transparent 70%),
+    linear-gradient(135deg, #251E16, #18140F);
+  border: 1px solid #4A3B28;
+  color: var(--text);
+  padding: 52px 56px;
+}
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent-light), var(--copper));
+}
+.cta-banner h2 { color: var(--cream); }
+.cta-banner p { color: var(--text-soft); }
+
+@media (max-width: 720px) {
+  .section { padding: 72px 16px; }
+  .section-tight { padding-top: 0; padding-bottom: 72px; }
+  .contact { padding-top: 0; }
+  .hero { padding: 40px 16px 56px; }
+  .hero-figure { height: 280px; order: -1; }
+  .hero-glow { width: 300px; height: 300px; }
+  .hero-logo { width: min(52%, 200px); }
+  .hero-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 14px; margin-top: 30px; }
+  .fact strong { font-size: 16px; }
+  .fact > span { font-size: 12.5px; line-height: 1.35; }
+  .interlude { padding: 8px 16px 0; }
+  .interlude-b { padding: 64px 16px 72px; }
+  .ornament span { width: 40px; }
+  .about { grid-template-columns: 1fr; gap: 36px; }
+  .about-card { padding: 24px; }
+  .band .reviews { padding-top: 72px; padding-bottom: 72px; }
+  .cta-banner { padding: 36px 26px; }
 }

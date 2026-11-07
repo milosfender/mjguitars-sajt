@@ -66,6 +66,11 @@
       s_intonation: "Intonation", s_intonation_d: "Jeder Ton sitzt sauber, auch weit oben am Griffbrett.",
       s_pickups: "Tonabnehmer (Pickups)", s_pickups_d: "Einbau und Tausch von Pickups für Ihren Wunschsound.",
       s_pots: "Potentiometer", s_pots_d: "Kratzende oder defekte Potis werden ausgetauscht.",
+      fact_personal: "Persönlich", fact_personal_d: "Beratung direkt vom Inhaber", fact_appt: "Nach Termin",
+      hero_rating: "{n} Google-Bewertungen", hero_rating_none: "auf Google",
+      pt1: "Persönliche Beratung", pt1_d: "Ein-Mann-Betrieb: Sie sprechen immer direkt mit mir.",
+      pt2: "Faire Preise", pt2_d: "Kompetente Beratung und fairer Service.",
+      pt3: "Nur nach Termin", pt3_d: "Für jeden Termin nehme ich mir ausreichend Zeit.",
       about_eyebrow: "Über uns", about_title: "Willkommen bei MJ Guitars",
       about_p1: "MJ Guitars ist weiterhin für Sie da – jetzt ausschließlich nach Terminvereinbarung.",
       about_p2: "Als Ein-Mann-Betrieb biete ich Ihnen persönliche Beratung und fairen Service – und nehme mir für jeden Termin ausreichend Zeit. Sie möchten ein Instrument kaufen, verkaufen oder servicieren lassen? Melden Sie sich einfach: Besichtigungen, An- und Verkäufe sowie Servicearbeiten erfolgen ausschließlich nach Terminvereinbarung.",
@@ -120,6 +125,11 @@
       s_intonation: "Intonation", s_intonation_d: "Every note in tune, all the way up the neck.",
       s_pickups: "Pickups", s_pickups_d: "Pickup installation and swaps for the sound you want.",
       s_pots: "Potentiometers", s_pots_d: "Scratchy or faulty pots replaced.",
+      fact_personal: "Personal", fact_personal_d: "Advice directly from the owner", fact_appt: "By appointment",
+      hero_rating: "{n} Google reviews", hero_rating_none: "on Google",
+      pt1: "Personal advice", pt1_d: "A one-man business: you always talk to me directly.",
+      pt2: "Fair prices", pt2_d: "Expert advice and fair service.",
+      pt3: "By appointment only", pt3_d: "I take enough time for every appointment.",
       about_eyebrow: "About us", about_title: "Welcome to MJ Guitars",
       about_p1: "MJ Guitars is still here for you – now by appointment only.",
       about_p2: "As a one-man business, I offer personal advice and fair service – and take enough time for every appointment. Want to buy, sell or service an instrument? Just get in touch: viewings, purchases, sales and service work are by appointment only.",
@@ -540,6 +550,19 @@
     if (!section) return;
     var data = state.reviews;
     var list = data && Array.isArray(data.reviews) ? data.reviews.filter(function (r) { return r && r.text; }) : [];
+
+    // Bewertung im Startbereich
+    var heroRating = document.getElementById("hero-rating");
+    var hAvg = data ? Number(data.average) : 0;
+    var hTotal = data ? Number(data.total) : 0;
+    if (heroRating) {
+      heroRating.hidden = !(hAvg > 0);
+      if (hAvg > 0) {
+        document.getElementById("hero-rating-num").textContent = hAvg.toLocaleString(state.lang === "en" ? "en-GB" : "de-AT", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+        document.getElementById("hero-rating-text").textContent = hTotal > 0 ? t("hero_rating").replace("{n}", hTotal) : t("hero_rating_none");
+      }
+    }
+
     if (!list.length) { section.hidden = true; return; }
     section.hidden = false;
 
