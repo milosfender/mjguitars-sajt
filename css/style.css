@@ -174,7 +174,7 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
 }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--text); }
 .brand-logo { width: auto; height: 64px; flex: 0 0 auto; }
-.brand-name { font-family: var(--font-head); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+.brand-name { font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 23px; letter-spacing: 0.05em; color: var(--cream); }
 .nav-right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; font-size: 16px; font-weight: 500; }
 .nav-links a, .nav-trigger { color: var(--text-soft); font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 15.5px; letter-spacing: .06em; }
