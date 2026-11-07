@@ -10,7 +10,7 @@
   /* ---------- Einstellungen (hier ändern) ---------- */
   var WHATSAPP_NUMBER = "4369918132766";
   // Link zur Willhaben-Seite von Milos: nur hier ändern, gilt für alle Willhaben-Links der Seite
-  var WILLHABEN_URL = "https://www.willhaben.at/iad/kaufen-und-verkaufen/d/ankauf-best-preise-e-gitarre-e-bass-western-klassik-fender-gibson-1889391876/";
+  var WILLHABEN_URL = "https://www.willhaben.at/iad/shop/mj-guitars";
   var DATA_URL = "data/guitars.json";
   var REVIEWS_URL = "data/reviews.json";
 
@@ -58,7 +58,7 @@
       zoom_in: "Vergrößern", zoom_out: "Verkleinern", zoom_fs: "Vollbild",
       note_willhaben: "Weitere Angebote finden Sie auf",
       reviews_eyebrow: "Google-Bewertungen", reviews_title: "Das sagen unsere Kunden",
-      reviews_more: "Alle Bewertungen auf Google", reviews_count: "{n} Bewertungen auf Google", reviews_count_one: "1 Bewertung auf Google",
+      reviews_more: "Alle Bewertungen auf Google", read_more: "Weiterlesen", read_less: "Weniger anzeigen", reviews_count: "{n} Bewertungen auf Google", reviews_count_one: "1 Bewertung auf Google",
       service_eyebrow: "Im Studio", service_title: "Set-Up & Wartung",
       service_lead: "Damit Ihre Gitarre optimal spielt: sauber eingestellt und richtig intoniert. Termin nach Vereinbarung.",
       service_cta: "Service anfragen",
@@ -112,7 +112,7 @@
       zoom_in: "Zoom in", zoom_out: "Zoom out", zoom_fs: "Full screen",
       note_willhaben: "More offers can be found on",
       reviews_eyebrow: "Google reviews", reviews_title: "What our customers say",
-      reviews_more: "All reviews on Google", reviews_count: "{n} reviews on Google", reviews_count_one: "1 review on Google",
+      reviews_more: "All reviews on Google", read_more: "Read more", read_less: "Show less", reviews_count: "{n} reviews on Google", reviews_count_one: "1 review on Google",
       service_eyebrow: "In the studio", service_title: "Set-up & maintenance",
       service_lead: "So your guitar plays its best: properly adjusted and intonated. By appointment.",
       service_cta: "Enquire about service",
@@ -561,8 +561,16 @@
       var card = el("figure", "review");
       card.appendChild(stars(Number(r.rating) || 5));
       var q = el("blockquote", "review-text");
-      q.appendChild(el("p", "", r.text));
+      q.appendChild(el("p", "", String(r.text).trim()));
       card.appendChild(q);
+      var more = el("button", "review-more", t("read_more"));
+      more.type = "button";
+      more.hidden = true;
+      more.addEventListener("click", function () {
+        var open = card.classList.toggle("review-open");
+        more.textContent = open ? t("read_less") : t("read_more");
+      });
+      card.appendChild(more);
       var cap = el("figcaption", "review-by");
       cap.appendChild(el("span", "review-avatar", String(r.name || "?").trim().charAt(0).toUpperCase()));
       var who = el("span", "review-who");
@@ -571,6 +579,27 @@
       cap.appendChild(who);
       card.appendChild(cap);
       track.appendChild(card);
+    });
+    // „Weiterlesen“ nur bei langen Texten zeigen
+    requestAnimationFrame(function () {
+      track.querySelectorAll(".review").forEach(function (card) {
+        var p = card.querySelector(".review-text p");
+        card.querySelector(".review-more").hidden = p.scrollHeight <= p.clientHeight + 2;
+      });
+    });
+  }
+
+  function initReviewNav() {
+    var track = document.getElementById("reviews-track");
+    if (!track) return;
+    ["rv-prev", "rv-next"].forEach(function (id, i) {
+      var b = document.getElementById(id);
+      if (!b) return;
+      b.addEventListener("click", function () {
+        var card = track.querySelector(".review");
+        var step = card ? card.getBoundingClientRect().width + 16 : track.clientWidth;
+        track.scrollBy({ left: (i === 0 ? -1 : 1) * step, behavior: "smooth" });
+      });
     });
   }
 
@@ -1009,6 +1038,7 @@
     initMenu();
     initZoom();
     initReveal();
+    initReviewNav();
 
     var saved = storageGet("mj-lang");
     state.lang = saved && I18N[saved] ? saved : "de";

@@ -1,5 +1,78 @@
 {
-  "average": null,
+  "average": 4.9,
   "total": null,
-  "reviews": []
+  "reviews": [
+    {
+      "name": "lorenz pambalk",
+      "rating": 5,
+      "date": "",
+      "text": "Die Bewertungen bis jetzt sind so gut dass ich ja fast schon stutzig war als ich auf diesen Laden gestoßen bin.\nHeute jedoch zum ersten Mal hergekommen und was soll man sagen. Das ist wirklich Kundenservice wie aus dem Lexikon. Der Milos hat nicht nur spürbar immense Ahnung von dem was er tut, sondern ist obendrein auch noch ein extrem gastfreundlicher, offener, fairer und ehrlicher Kerl.\nMan merkt einfach, es sitzt einem jemand gegenüber, der Freude daran hat den Leuten zu helfen, egal ob man gerade erst angefangen hat oder schon ein langjähriger Meister ist, so wie er selbst.\nHier stimmt wirklich alles und ich werde MJ Guitars wien definitv zu meinem neuen Händler und serviceanten des vertrauens machen!!!!!"
+    },
+    {
+      "name": "Niklas Hensel",
+      "rating": 5,
+      "date": "",
+      "text": "Nachdem ich meine Potentiometer bei einer Reinigung versehentlich beschädigt hatte, brachte ich meine treue Cort zu Herrn Jovanovic. Er hat mich sehr kompetent und freundlich beraten und fragte, ob er die vorhandene Elektronik gleich upgraden soll und erklärte die Unterschiede im Klang und Spielbarkeit von einzelnen Potentiometertypen. Seine Meinung wirkte äußerst fundiert auf mich, es wirkte nicht wie ein typisches Verkaufsgespräch, sondern wie ein ehrlicher Ratschlag von einem Musiker zum andern. Der Service dauerte ca. eine Woche, die Kommunikation war sehr gut und der Preis war überaus fair und es wurden hochwertige Potis eingebaut. Die Gitarre klingt besser als jemals zuvor, Herr Jovanovic hatte nicht zu viel versprochen! Ich war in meinem Leben schon in einigen Gitarrengeschäften, aber hier merkt man, das ist jemand, der es wirklich für die Musik und für den Kunden macht."
+    },
+    {
+      "name": "Johanna Peeep",
+      "rating": 5,
+      "date": "",
+      "text": "Der Inhaber ist mit Herz und Seele bei seiner Arbeit dabei. Man spürt richtig, dass sein Herz für Gitarren brennt und das spiegelt sich auch in seiner Beratung wieder. Super netter und herzlicher Mensch, der sich wirklich in seinem Fach auskennt.\nKann ich nur jeden wärmsten weiterempfehlen!"
+    },
+    {
+      "name": "Max Leisentritt",
+      "rating": 5,
+      "date": "",
+      "text": "Also ich kann mich den restlichen Bewertungen nur anschließen. Man betritt den Laden und da sitzt dieser total freundliche Herr und macht sein Ding. Hab viel mit ihm geplaudert während er an meiner Gitarre herum gedoktort hat. Ein Mann mit viel liebe zu seinem Handwerk und noch mehr Ahnung. Ich war bei den bewertungen erst auch stutzig, aber kein Zweifel dass sich dieser Mann jede davon vollumfänglich verdient hat. Meine neue Erstanlaufstelle wäre damit gefunden."
+    },
+    {
+      "name": "alexander barta",
+      "rating": 5,
+      "date": "",
+      "text": "Aufgrund der durchwegs postiven Rezensionen habe ich heute meine Gitarre zu MJ Guitars gebracht. Ich wollte eine professionelle Meinung bezgl. des Tones bzw. der Pickup Einstellung und auch zum Rest der Hardware. Da es sich um eine relativ günstige Gitarre handelt war ich gespannt ob ich mit meinem Anliegen auch Ernst genommen werde. Der Inhaber, Herr Jovanovic, hat mich in seinem Geschäft sehr freundlich empfangen. Der Shop ist hell, freundlich und einladend. Er hat sofort erfasst worum es geht und sich mein Instrument genau angeschaut. Nachdem er die Gitarre angespielt hatte erklärte er mir was er daran machen würde und auch warum. Er schwätzte mir nichts auf, vielmehr stärkte er mein Vertrauen in mein eigenes Instrument. Dann erledigte er sofort die nötigen Arbeiten. Mit einer perfekt eingestellten Gitarre und der Erkenntnis mein zukünftiges Lieblingsgitarrengeschäft kennengelernt zu haben fuhr ich wieder nach Hause. Von mir eine 100%ige Empfehlung für MJ Guitars."
+    },
+    {
+      "name": "Explore English",
+      "rating": 5,
+      "date": "",
+      "text": "I bought my daughter a Fender Stratocaster Japan 1986 Contemporary S1 electric guitar at MJ Guitars yesterday (18th birthday gift). I know very little about guitars and was very thankful for the time Michi took to help me with making my choice. It was clear that he wasn’t interested in just taking my money and that it was important for him that I make the right selection as his customer. My daughter is so happy with her absolutely beautiful Stratocaster and I am so grateful for the professional and honest guidance of Michi. I can completely recommend MJ Guitars and know that I will be a regular customer for all things guitar related!\nThank you, Michi, for helping to make my daughter’s 18th birthday so special!"
+    },
+    {
+      "name": "Mathias Gartler",
+      "rating": 5,
+      "date": "",
+      "text": "Außergewöhnlich freundlich, entgegenkommend und kundenorientiert. Sehr gute Beratung.\nNahezu beispiellos in Wien bei den E-Gitarren. Respekt.\n\nIch hab mein Insturment bei ihm wieder abgeholt, auf den Bildern sieht man meine EC-256 - mein Übungsinstrument zum Spielen wie zum Basteln, schaut also wild aus.\nBisher war Mr. MJ der erste, der mich auf den verzogenen Hals und dessen spezielles mechanisches Problemchen hingewiesen hat (Werksfehler).\nIch hab das auch mit anderen Fachkundigen so bestätigen können.\n\nDas ist anständige Arbeit und gute Beratung gewesen und ich empfehle MJ Guitars gerne weiter."
+    },
+    {
+      "name": "Karim El-Azar",
+      "rating": 5,
+      "date": "",
+      "text": "Habe gerade eine Ibanez RG5120M Polar Lights Prestige von MJ Guitars gekauft.\nDer Betreiber ist zu Beginn schon sehr nett und kompetent entgegenkommen.\nAls ich in das Geschäft kam, wollte ich in dem Moment nur zwei Dinge:\nEine Toilette benutzen und danach meine Traumgitarre rocken.\nUnd genau das bekam ich.\nAuf einem Half-Stack im Grunge-Sound probierte ich die RG5120M ausgiebig aus und konnte dem High-End Modell von Ibanez nicht mehr den Rücken kehren.\nIch bekam die Gitarre, ein Plektron und einen Satz 10er-Saiten für C#-Standardtuning mit.\nWeitere Fragen über zukünftige Investitionen in Effektgeräte/Prozessoren und Interfaces wurden beantwortet.\nDer Betreiber ist ein sehr angenehmer und kompetenter Berater, vollkommen auf menschlicher Basis. Er riet mir auch vor dem Kauf meine Gitarre mit einer anderen Ibanez zu vergleichen.\nAuf jeden Fall empfehlenswert und definitiv sinnvoll, denn jede second Hand Gitarre verdient ein neues zu Hause.\nIch werde dort wieder einkaufen und kann jedem MJ Guitars herzlichst empfehlen."
+    },
+    {
+      "name": "Bruno Baatz",
+      "rating": 5,
+      "date": "",
+      "text": "Große Empfehlung! Extrem kompetente und freundliche Beratung/Betreuung/Service zu sehr sehr fairen Preisen. Meine Squier spielt sich jetzt wie eine custom Shop!"
+    },
+    {
+      "name": "George Z",
+      "rating": 5,
+      "date": "",
+      "text": "Sehr schneller, freundlicher und kompetenter Service!\nHabe hier meine Gitarre einstellen lassen, auf meine Wünsche wurde perfekt eingegangen, der Inhaber hat mich top beraten und der Preis war mehr als fair.\nKomme auf jeden Fall wieder, mehr als hier kann man für sein Geld nicht bekommen!"
+    },
+    {
+      "name": "Sascha Sobot",
+      "rating": 5,
+      "date": "",
+      "text": "Bester Mann! Habe mir auf Amazon einen Bass Hals für einen Harley Benton billig Bass gekauft. Ich will nix weghauen und der original Hals war schief wie der Turm von Pisa. MJ hat sich darum gekümmert das der neue Hals spielbar ist obwohl der auch schief ist und die bundstäbe ungleich hoch sind. Das Ganze schnell U d sehr günstig. Absolut empfehlenswert!!"
+    },
+    {
+      "name": "allo allo",
+      "rating": 5,
+      "date": "",
+      "text": "Aufgrund der sehr positiven Meinung meines Gitarrenlehrerers über dieses Geschäft habe ich meine Gitarre hier servicieren lassen. Vom Betreten des Ladens bis zur Abholung hat alles super funktioniert. Alles in allem bin ich sehr zufrieden und kann dieses Geschäft nur weiterempfehlen."
+    }
+  ]
 }
