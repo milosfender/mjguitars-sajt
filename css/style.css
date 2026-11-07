@@ -1188,7 +1188,7 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
    ========================================================== */
 .section { padding: 104px 24px; }
 .section-tight { padding-top: 8px; padding-bottom: 104px; }
-.contact { padding-top: 0; }
+.contact { padding-top: 104px; }
 
 /* Überschriften-Zeile: goldener Strich vor jedem Kicker */
 .eyebrow { display: flex; align-items: center; gap: 12px; }
@@ -1340,7 +1340,7 @@ button.btn { font-family: inherit; font-size: inherit; cursor: pointer; }
 @media (max-width: 720px) {
   .section { padding: 72px 16px; }
   .section-tight { padding-top: 0; padding-bottom: 72px; }
-  .contact { padding-top: 0; }
+  .contact { padding-top: 72px; }
   .hero { padding: 40px 16px 56px; }
   .hero-figure { height: 280px; order: -1; }
   .hero-glow { width: 300px; height: 300px; }
