@@ -3,20 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MJ Guitars – Gitarren &amp; Bässe in Wien</title>
-  <meta name="description" content="Neue und gebrauchte Gitarren und Bässe in Wien. Auswahl, Beratung und Set-Up nach Terminvereinbarung.">
+  <title>MJ Guitars – Gebrauchte Gitarren &amp; Bässe in Wien</title>
+  <meta name="description" content="Gebrauchte Gitarren, Bässe, Verstärker und Effektpedale in Wien. Persönliche Beratung, Set-Up und Ankauf nach Terminvereinbarung.">
   <meta name="theme-color" content="#15120E">
   <link rel="canonical" href="https://mjguitars.at/">
   <link rel="icon" href="images/logo.jpg">
   <link rel="apple-touch-icon" href="images/logo.jpg">
+  <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Vorschau beim Teilen (WhatsApp, Instagram, Facebook) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MJ Guitars">
   <meta property="og:locale" content="de_AT">
   <meta property="og:url" content="https://mjguitars.at/">
-  <meta property="og:title" content="MJ Guitars – Gitarren &amp; Bässe in Wien">
-  <meta property="og:description" content="Neue und gebrauchte Gitarren und Bässe, Set-Up und Ankauf. Termin nach Vereinbarung in 1020 Wien.">
+  <meta property="og:title" content="MJ Guitars – Gebrauchte Gitarren &amp; Bässe in Wien">
+  <meta property="og:description" content="Gebrauchte Gitarren und Bässe, Set-Up und Ankauf. Termin nach Vereinbarung in 1020 Wien.">
   <meta property="og:image" content="https://mjguitars.at/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -32,7 +33,7 @@
     "url": "https://mjguitars.at/",
     "logo": "https://mjguitars.at/images/logo.jpg",
     "image": "https://mjguitars.at/images/og-image.jpg",
-    "description": "Neue und gebrauchte Gitarren und Bässe, Set-Up, Wartung und Ankauf in Wien. Termin nach Vereinbarung.",
+    "description": "Gebrauchte Gitarren und Bässe, Set-Up, Wartung und Ankauf in Wien. Termin nach Vereinbarung.",
     "telephone": "+43 699 18132766",
     "email": "mj.guitarshop@hotmail.com",
     "address": {
@@ -79,14 +80,25 @@
   </div>
 
   <header class="site-header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Hauptmenü">
       <a href="#top" class="brand">
-        <img class="brand-logo" src="images/logo.jpg" alt="MJ Guitars Logo" width="44" height="44">
+        <img class="brand-logo" src="images/logo-full-64.png" srcset="images/logo-full-64.png 1x, images/logo-full-128.png 2x, images/logo-full-192.png 3x" alt="MJ Guitars" width="49" height="64">
         <span class="brand-name">MJ Guitars</span>
       </a>
       <div class="nav-right">
         <div class="nav-links">
-          <a href="#gitarren" data-i18n="nav_guitars">Gitarren</a>
+          <div class="nav-item" id="prod-item">
+            <button type="button" class="nav-trigger" id="prod-trigger" aria-expanded="false" aria-controls="prod-menu">
+              <span data-i18n="nav_products">Produkte</span>
+              <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="mega" id="prod-menu">
+              <div class="mega-inner">
+                <ul class="mega-list" id="mega-list"></ul>
+                <a href="#gitarren" class="mega-all" data-cat="all"><span data-i18n="menu_all">Alle Produkte ansehen</span> <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
           <a href="#service" data-i18n="nav_service">Service</a>
           <a href="#ankauf" data-i18n="nav_sell">Verkaufen</a>
           <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
@@ -106,7 +118,7 @@
       <div class="hero-text">
         <p class="eyebrow" data-i18n="hero_eyebrow">Gitarren &amp; Bässe in Wien</p>
         <h1 data-i18n="hero_title">Gitarren &amp; Bässe mit Charakter.</h1>
-        <p class="lead" data-i18n="hero_lead">Neue und gebrauchte Instrumente für jedes Budget, ehrliche Beratung und Set-Up nach Terminvereinbarung. Vom ersten Akkord bis zur Bühne.</p>
+        <p class="lead" data-i18n="hero_lead">Gebrauchte Gitarren und Bässe mit Geschichte – für jedes Budget, mit ehrlicher Beratung und Set-Up nach Terminvereinbarung. Vom ersten Akkord bis zur Bühne.</p>
         <div class="hero-actions">
           <a href="#" class="btn btn-primary" data-wa="termin" data-i18n="cta_book">Termin vereinbaren</a>
           <a href="tel:+4369918132766" class="btn btn-outline" data-i18n="cta_call">Anrufen</a>
@@ -118,24 +130,28 @@
       </figure>
     </section>
 
-    <!-- Zitat -->
-    <section class="quote">
-      <p data-i18n="quote_text">Nichts ist schöner als eine Gitarre. Außer vielleicht zwei.</p>
+    <!-- Zitat (unseres) -->
+    <section class="quote" aria-label="Zitat">
+      <figure class="side-quote reveal">
+        <blockquote>
+          <p><span class="qm">„</span><span data-i18n="quote_l1">Nichts ist schöner als eine Gitarre.</span><br><em><span data-i18n="quote_l2">Außer vielleicht zwei.</span><span class="qm">“</span></em></p>
+        </blockquote>
+      </figure>
     </section>
 
-    <!-- Gitarren -->
+    <!-- Produkte -->
     <section id="gitarren" class="section">
       <div class="section-head">
         <div>
           <p class="eyebrow" data-i18n="guitars_eyebrow">Aktuell zum Verkauf</p>
-          <h2 data-i18n="guitars_title">Unsere Gitarren</h2>
+          <h2 data-i18n="guitars_title">Unsere Produkte</h2>
           <p class="count" id="count"></p>
         </div>
       </div>
 
       <div class="pills" id="cat-pills" role="group" aria-label="Kategorie"></div>
 
-      <form class="search-row" id="filters" role="search" aria-label="Gitarren suchen">
+      <form class="search-row" id="filters" role="search" aria-label="Produkte suchen">
         <label class="field field-search">
           <span data-i18n="filter_search">Suche</span>
           <input type="search" id="f-search" placeholder="z.B. Stratocaster, Yamaha" data-i18n-placeholder="filter_search_ph">
@@ -173,8 +189,45 @@
 
       <p class="note">
         <span data-i18n="note_willhaben">Weitere Angebote finden Sie auf</span>
-        <a href="https://www.willhaben.at/iad/kaufen-und-verkaufen/d/ankauf-best-preise-e-gitarre-e-bass-western-klassik-fender-gibson-1889391876/" target="_blank" rel="noopener">Willhaben</a>.
+        <a href="https://www.willhaben.at/iad/kaufen-und-verkaufen/d/ankauf-best-preise-e-gitarre-e-bass-western-klassik-fender-gibson-1889391876/" data-willhaben target="_blank" rel="noopener">Willhaben</a>.
       </p>
+    </section>
+
+    <!-- Google-Bewertungen (erscheint erst, wenn Bewertungen eingetragen sind) -->
+    <section id="bewertungen" class="section reviews" hidden>
+      <div class="reviews-head">
+        <div>
+          <p class="eyebrow" data-i18n="reviews_eyebrow">Google-Bewertungen</p>
+          <h2 data-i18n="reviews_title">Das sagen unsere Kunden</h2>
+        </div>
+        <div class="reviews-score" id="reviews-score"></div>
+      </div>
+      <div class="reviews-track" id="reviews-track"></div>
+      <a class="btn btn-outline reviews-more" id="reviews-more" href="https://www.google.com/maps?cid=9775014654965418293" target="_blank" rel="noopener">
+        <span data-i18n="reviews_more">Alle Bewertungen auf Google</span> <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="section about">
+      <div class="about-text">
+        <p class="eyebrow" data-i18n="about_eyebrow">Über uns</p>
+        <h2 data-i18n="about_title">Willkommen bei MJ Guitars</h2>
+        <p class="about-lead" data-i18n="about_p1">MJ Guitars ist weiterhin für Sie da – jetzt ausschließlich nach Terminvereinbarung.</p>
+        <p data-i18n="about_p2">Als Ein-Mann-Betrieb biete ich Ihnen persönliche Beratung und fairen Service – und nehme mir für jeden Termin ausreichend Zeit. Sie möchten ein Instrument kaufen, verkaufen oder servicieren lassen? Melden Sie sich einfach: Besichtigungen, An- und Verkäufe sowie Servicearbeiten erfolgen ausschließlich nach Terminvereinbarung.</p>
+        <p class="about-tagline" data-i18n="about_tagline">Persönlicher Service, kompetente Beratung und faire Preise.</p>
+        <p data-i18n="about_p3">Ich freue mich auf Ihre Anfrage!</p>
+        <p class="about-sign">Milos Jovanovic</p>
+        <a href="#" class="btn btn-primary" data-wa="termin" data-i18n="cta_book">Termin vereinbaren</a>
+      </div>
+      <aside class="about-aside" aria-label="Zitat von Ludwig van Beethoven">
+        <figure class="side-quote side-quote-b reveal">
+          <blockquote>
+            <p><span class="qm">„</span><span data-i18n="beethoven_text">Eine falsche Note zu spielen ist unwichtig, aber ohne Leidenschaft zu spielen ist unverzeihlich.</span><span class="qm">“</span></p>
+          </blockquote>
+          <figcaption>Ludwig van Beethoven</figcaption>
+        </figure>
+      </aside>
     </section>
 
     <!-- Service -->
@@ -183,30 +236,27 @@
         <div class="band-intro">
           <p class="eyebrow" data-i18n="service_eyebrow">Im Studio</p>
           <h2 data-i18n="service_title">Set-Up &amp; Wartung</h2>
-          <p data-i18n="service_lead">Damit Ihre Gitarre optimal spielt: sauber eingestellt, richtig intoniert und mit frischen Saiten. Termin nach Vereinbarung.</p>
+          <p data-i18n="service_lead">Damit Ihre Gitarre optimal spielt: sauber eingestellt und richtig intoniert. Termin nach Vereinbarung.</p>
           <a href="#" class="btn btn-primary" data-wa="service" data-i18n="service_cta">Service anfragen</a>
         </div>
-        <div class="cards-2">
-          <div class="panel">
-            <h3 data-i18n="service_maint">Wartung &amp; Set-Up</h3>
-            <ul>
-              <li data-i18n="s_setup">Set-Up und Halskrümmung</li>
-              <li data-i18n="s_intonation">Intonation</li>
-              <li data-i18n="s_strings">Neubesaitung</li>
-              <li data-i18n="s_pickups">Tonabnehmer (Pickups): Einbau und Tausch</li>
-              <li data-i18n="s_pots">Potentiometer-Austausch</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3 data-i18n="service_acc">Zubehör</h3>
-            <ul>
-              <li data-i18n="a_strings">Saiten, Gurte, Kapodaster</li>
-              <li data-i18n="a_cases">Taschen und Koffer</li>
-              <li data-i18n="a_picks">Plektren und Kabel</li>
-              <li data-i18n="a_amps">Verstärker und Effekte</li>
-            </ul>
-          </div>
-        </div>
+        <ul class="services">
+          <li class="service">
+            <h3 data-i18n="s_setup">Set-Up &amp; Halskrümmung</h3>
+            <p data-i18n="s_setup_d">Saitenlage und Halsstab so eingestellt, dass sich die Gitarre leicht spielt.</p>
+          </li>
+          <li class="service">
+            <h3 data-i18n="s_intonation">Intonation</h3>
+            <p data-i18n="s_intonation_d">Jeder Ton sitzt sauber, auch weit oben am Griffbrett.</p>
+          </li>
+          <li class="service">
+            <h3 data-i18n="s_pickups">Tonabnehmer (Pickups)</h3>
+            <p data-i18n="s_pickups_d">Einbau und Tausch von Pickups für Ihren Wunschsound.</p>
+          </li>
+          <li class="service">
+            <h3 data-i18n="s_pots">Potentiometer</h3>
+            <p data-i18n="s_pots_d">Kratzende oder defekte Potis werden ausgetauscht.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -280,6 +330,10 @@
           <button type="button" class="gallery-nav prev" id="g-prev" aria-label="Vorheriges Foto">‹</button>
           <button type="button" class="gallery-nav next" id="g-next" aria-label="Nächstes Foto">›</button>
           <span class="gallery-count" id="g-count"></span>
+          <button type="button" class="gallery-zoom" id="g-zoom">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            <span data-i18n="zoom_open">Vollbild</span>
+          </button>
         </div>
         <div class="thumbs" id="thumbs"></div>
       </div>
@@ -294,12 +348,33 @@
     </div>
   </dialog>
 
+  <!-- Vollbild mit Zoom -->
+  <dialog id="zoom" class="zoom" aria-label="Foto im Vollbild">
+    <div class="zoom-stage" id="zoom-stage">
+      <img id="zoom-img" alt="" draggable="false">
+    </div>
+    <div class="zoom-bar zoom-top">
+      <span class="zoom-count" id="zoom-count"></span>
+      <div class="zoom-tools">
+        <button type="button" class="zoom-btn" id="zoom-out" aria-label="Verkleinern">−</button>
+        <button type="button" class="zoom-btn" id="zoom-in" aria-label="Vergrößern">+</button>
+        <button type="button" class="zoom-btn" id="zoom-fs" aria-label="Vollbild">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg>
+        </button>
+        <button type="button" class="zoom-btn zoom-close" id="zoom-close" aria-label="Schließen">×</button>
+      </div>
+    </div>
+    <button type="button" class="zoom-nav prev" id="zoom-prev" aria-label="Vorheriges Foto">‹</button>
+    <button type="button" class="zoom-nav next" id="zoom-next" aria-label="Nächstes Foto">›</button>
+    <p class="zoom-hint" id="zoom-hint" data-i18n="zoom_hint">Doppelt tippen oder mit zwei Fingern zoomen</p>
+  </dialog>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <span>© 2026 MJ Guitars, Wien</span>
       <span class="footer-links">
         <a href="https://www.instagram.com/mjguitars.vienna/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.willhaben.at/iad/kaufen-und-verkaufen/d/ankauf-best-preise-e-gitarre-e-bass-western-klassik-fender-gibson-1889391876/" target="_blank" rel="noopener">Willhaben</a>
+        <a href="https://www.willhaben.at/iad/kaufen-und-verkaufen/d/ankauf-best-preise-e-gitarre-e-bass-western-klassik-fender-gibson-1889391876/" data-willhaben target="_blank" rel="noopener">Willhaben</a>
         <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
         <a href="datenschutz.html" data-i18n="footer_privacy">Datenschutz</a>
       </span>
