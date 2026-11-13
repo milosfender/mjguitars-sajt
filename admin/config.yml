@@ -6,7 +6,7 @@ backend:
   name: github
   repo: milosfender/mjguitars-sajt
   branch: main
-  base_url: https//sveltia-cms-auth.9kwzbgpwy2.workers.dev
+  base_url: https://sveltia-cms-auth.9kwzbgpwy2.workers.dev
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
