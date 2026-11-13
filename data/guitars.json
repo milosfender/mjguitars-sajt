@@ -130,6 +130,22 @@
         "/images/uploads/IMG_6219.webp"
       ],
       "sold": false
+    },
+    {
+      "brand": "Squire by Fender Stratocaster HSS *SET: Verstärker, Kabel, Tasche, Gurt *",
+      "model": "Stratocaster",
+      "category": "E-Gitarre",
+      "condition": "Gebraucht – sehr gut",
+      "year": 2021,
+      "price": 249,
+      "description": "Im Set enthalten:\n\nE-Gitarre: Fender Squier Stratocaster HSS\nVerstärker: Fender Frontman  15G\nGitarrentasche (Gigbag)\nInstrumentenkabel\nGitarrengurt\n\n\nZustand:\n\nSehr gut, kaum gespielt Gepflegter Zustand mit leichten Gebrauchsspuren. Alles funktioniert einwandfrei.",
+      "photos": [
+        "/images/uploads/IMG_6365.webp",
+        "/images/uploads/IMG_6366.webp",
+        "/images/uploads/IMG_6367.webp",
+        "/images/uploads/IMG_6368.webp"
+      ],
+      "sold": false
     }
   ]
 }
