@@ -1,0 +1,6 @@
+# Alte Adressen der früheren Website auf die neuen Seiten weiterleiten (301 = dauerhaft)
+/Home.html          /                    301
+/home.html          /                    301
+/Impressum.html     /impressum.html      301
+/Dateschutz.html    /datenschutz.html    301
+/Datenschutz.html   /datenschutz.html    301
