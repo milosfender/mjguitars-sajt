@@ -146,6 +146,26 @@
         "/images/uploads/IMG_6368.webp"
       ],
       "sold": false
+    },
+    {
+      "brand": "Epiphone",
+      "model": "Les Paul Special II",
+      "category": "E-Gitarre",
+      "condition": "Wie neu",
+      "year": 2020,
+      "price": 130,
+      "description": "Neuwertig, super Anfänger Gitarre !\n\nInkl. Gigbag",
+      "photos": [
+        "/images/uploads/IMG_6469.webp",
+        "/images/uploads/IMG_6471.webp",
+        "/images/uploads/IMG_6472.webp",
+        "/images/uploads/IMG_6473.webp",
+        "/images/uploads/IMG_6474.webp",
+        "/images/uploads/IMG_6475.webp",
+        "/images/uploads/IMG_6476.webp",
+        "/images/uploads/IMG_6477.webp"
+      ],
+      "sold": false
     }
   ]
 }
