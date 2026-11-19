@@ -166,6 +166,27 @@
         "/images/uploads/IMG_6477.webp"
       ],
       "sold": false
+    },
+    {
+      "brand": "Eko",
+      "model": "Ranger 6",
+      "category": "Westerngitarre",
+      "condition": "Gebraucht – gut",
+      "year": 1970,
+      "price": 199,
+      "description": "Vintage Wester Gitarre im Guter Zustand Toller Sound!\n\ninkl. Tasche",
+      "photos": [
+        "/images/uploads/IMG_6468.webp",
+        "/images/uploads/IMG_6458.webp",
+        "/images/uploads/IMG_6460.webp",
+        "/images/uploads/IMG_6462.webp",
+        "/images/uploads/IMG_6463.webp",
+        "/images/uploads/IMG_6464.webp",
+        "/images/uploads/IMG_6465.webp",
+        "/images/uploads/IMG_6466.webp",
+        "/images/uploads/IMG_6467.webp"
+      ],
+      "sold": false
     }
   ]
 }
