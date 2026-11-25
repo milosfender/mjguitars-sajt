@@ -187,6 +187,24 @@
         "/images/uploads/IMG_6467.webp"
       ],
       "sold": false
+    },
+    {
+      "brand": "Fender Stratocaster",
+      "model": "40TH Anny",
+      "category": "E-Gitarre",
+      "condition": "Gebraucht – sehr gut",
+      "year": 1994,
+      "price": 1399,
+      "description": "Fender Stratocaster 40TH Anniversary  Midnight Blue\nMADE IN USA 1994\ninkl. Original Case und Zubehör\nKorpus & Hals\n\nKorpus. Erle (Alder) mit Hochglanz-Polyurethan-Lackierung.\nHals. Geschraubter Ahornhals (Maple) im „Modern C“-Profil mit 25,5\" (648 mm) Mensur.\nGriffbrett. Ahorn (Maple) mit 9,5\" (241 mm) Radius und Dot-Inlays.\nBünde & Sattel. 22 Medium-Jumbo-Bünde und 42,8 mm (1.6875\") Sattelbreite.\n\nElektronik & Hardware\nTonabnehmer. 3 × Fender American Standard Single-Coils (Alnico-Magnete, SSS-Konfiguration).\nSchaltung. 5-Wege-Schalter, 1 × Master Volume, 2 × Tone (inklusive TBX-Tone-Control für Mitte/Steg).\nBrücke. Fender American 2-Point Synchronized Tremolo mit Block-Stahlreitern.",
+      "photos": [
+        "/images/uploads/IMG_6423.webp",
+        "/images/uploads/IMG_6430.webp",
+        "/images/uploads/IMG_6431.webp",
+        "/images/uploads/IMG_6435.webp",
+        "/images/uploads/IMG_6436.webp",
+        "/images/uploads/IMG_6441.webp"
+      ],
+      "sold": false
     }
   ]
 }
