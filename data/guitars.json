@@ -190,7 +190,7 @@
     },
     {
       "brand": "Fender Stratocaster",
-      "model": "40TH Anny",
+      "model": "40TH Anni",
       "category": "E-Gitarre",
       "condition": "Gebraucht – sehr gut",
       "year": 1994,
@@ -203,6 +203,19 @@
         "/images/uploads/IMG_6435.webp",
         "/images/uploads/IMG_6436.webp",
         "/images/uploads/IMG_6441.webp"
+      ],
+      "sold": false
+    },
+    {
+      "brand": "NUX",
+      "model": "Amp Academy Pedal",
+      "category": "Effektpedal",
+      "condition": "Wie neu",
+      "year": 2026,
+      "price": 100,
+      "description": "Technische Daten\n\nModel: NUX Amp Academy NGS-6\nTyp: Amp-Modeler- und Cabinet-Simulator-Pedal\nPreamp-Modelle: 6 Röhrenamp-Typen (Fender Twin Reverb, Fender Deluxe Reverb, Vox AC30, Marshall Plexi, Marshall JCM800, Friedman BE-100)\nCab-Sim: 512 Samples IR, optional 1.024 Samples IR über Software\nEffekte: Compressor, Gate, Boost, Mod, Delay, Reverb\nRouting-Optionen: Amp In/Out, Line Out, DI Out, USB Audio\nInput: 1/4\" Mono-Klinke\nOutputs: 1/4\" Stereo-TRS (L/R), XLR DI Out, Kopfhörerausgang\nUSB Port: Für Firmware-Update, Editor-Software, USB-Audiointerface\nMIDI: In (über TRS-Adapter)\nBedienelemente: Gain, Master, Bass, Mid, Treble, Level, Mode-Schalter, Preset-Taster\nLeistungsanforderung: 9V DC, Center-Negative, mindestens 300 mA\nAbmessungen: 105 mm (B) × 115 mm (T) × 58 mm (H)\nGewicht: Ca. 440 g",
+      "photos": [
+        "/images/uploads/5882_697359024.webp"
       ],
       "sold": false
     }
